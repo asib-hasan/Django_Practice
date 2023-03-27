@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+</head>
+<body>
+    {%if pay%}
+    <table>
+        <tr>
+            <th>id</th>
+            <th>pay_id</th>
+            <th>pay_option</th>
+            <th>min_pay</th>
+        </tr>
+        {%for x in pay%}
+        <tr>
+            <td>{{x.id}}</td>
+            <td>{{x.pay_id}}</td>
+            <td>{{x.pay_option}}</td>
+            <td>{{x.min_pay}}</td>
+        </tr>
+        {%endfor%}
+    </table>
+    {%else%}
+    <h1>No available Data</h1>
+    {%endif%}
+</body>
+</html>
